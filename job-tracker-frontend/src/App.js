@@ -7,8 +7,8 @@ export default function App() {
   const [jobs, setJobs] = useState([]);
 
   const fetchJobs = () => {
-    axios.get("http://job-tracker-backend.local/get_jobs.php")
-      .then(response => setJobs(response.data))
+    axios.get("http://job-tracker.infy.uk/get_jobs.php")
+    .then(response => setJobs(response.data))
       .catch(error => console.error("Error fetching jobs:", error));
   };
 
