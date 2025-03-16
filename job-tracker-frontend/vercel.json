@@ -5,9 +5,16 @@
     "outputDirectory": "build",
     "routes": [
       {
+        "src": "/static/css/(.*)",
+        "headers": { "Content-Type": "text/css" }
+      },
+      {
+        "src": "/static/js/(.*)",
+        "headers": { "Content-Type": "application/javascript" }
+      },
+      {
         "src": "/(.*)",
         "dest": "/index.html"
       }
     ]
-  }
-  
+}
